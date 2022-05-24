@@ -20,4 +20,4 @@ jobs:
             - ./node_modules
       - run:
           name: Run tests
-          command: npm run test a --passWithNoTests
+          command: npm run test --passWithNoTests
