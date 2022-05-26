@@ -1,0 +1,34 @@
+.data-table{
+    margin: auto;
+
+    &__header{
+        &-cell{
+            border: none;
+            padding: 2rem 0 0 4rem;
+            font-size: 18px;
+            font-weight: 500;
+            color: gray;
+            text-align: left;
+        }
+    }
+
+    &__body{
+        &-cell{
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &-image{
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                margin-right: 2rem;
+            }
+
+            &-country{
+                color: rgba(0,0,0,0.3);
+            }
+        }
+    }
+}
