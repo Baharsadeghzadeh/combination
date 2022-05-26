@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Tdata } from '../shared/types/data-table';
+import { Tdata } from 'shared/types/data-table';
 
 export const useFetch = (url: string, ref: any, initialValue: Tdata) => {
     const [data, setData] = useState<Tdata>(initialValue);
@@ -10,9 +10,9 @@ export const useFetch = (url: string, ref: any, initialValue: Tdata) => {
         if (ref.current) {
           (async () => {
             try {
-              const res = await fetch(url);
-              const resJson = await res.json();
-              setData(resJson);
+              const response = await fetch(url);
+              const responseJson = await response.json();
+              setData(responseJson);
             } catch (err) {
               setError(err);
             } finally {
