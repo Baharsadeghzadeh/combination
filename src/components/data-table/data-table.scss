@@ -1,14 +1,25 @@
+@import '../../shared/styles/devices.scss';
+
 .data-table{
-    margin: auto;
+    margin: 2rem auto;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 15px;
 
     &__header{
         &-cell{
             border: none;
-            padding: 2rem 0 0 4rem;
             font-size: 18px;
             font-weight: 500;
             color: gray;
             text-align: left;
+
+            @include desktop {
+                padding: 2rem 0 0 4rem;
+            }
+
+            @include mobile {
+                padding: 2rem 0 0 2rem;
+            }
         }
     }
 
@@ -16,14 +27,25 @@
         &-cell{
             padding: 2rem;
             display: flex;
-            flex-direction: row;
             align-items: center;
+
+            @include desktop {
+                flex-direction: row;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+            }
 
             &-image{
                 width: 72px;
                 height: 72px;
                 border-radius: 50%;
-                margin-right: 2rem;
+            }
+
+            &-info{
+                margin: 1rem;
             }
 
             &-country{
