@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import { useFetch } from '../../hooks/use_fetch';
+import { useFetch } from 'hooks/use_fetch';
 import DataTable from '../data-table/data-table';
-import { FETCH_DATA_URL } from '../../constants/urls';
+import { FETCH_DATA_URL } from 'constants/urls';
 
 const App = () => {
   const isComponentMounted = useRef(true);

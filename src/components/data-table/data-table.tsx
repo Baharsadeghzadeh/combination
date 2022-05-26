@@ -1,11 +1,11 @@
-import { Tusers } from '../../shared/types/data-table';
+import { Tusers } from 'shared/types/data-table';
 import './data-table.scss';
 
-type TDataTable = {
+type TdataTable = {
     data: Tusers[];
 }
 
-const DataTable = ({ data } : TDataTable) => {
+const DataTable = ({ data } : TdataTable) => {
     return(
         <div>
             <table data-testid='dti_table' className='data-table'>
