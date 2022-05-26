@@ -19,7 +19,7 @@ const DataTable = ({ data } : TDataTable) => {
                             <div>
                                 <img className='data-table__body-cell-image' src={user.picture.medium}/>
                             </div>
-                            <div>
+                            <div className='data-table__body-cell-info'>
                                 <p>{user.name.first} {user.name.last}</p>
                                 <p className='data-table__body-cell-country'>{user.location.country}</p>
                             </div>
