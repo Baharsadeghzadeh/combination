@@ -16,3 +16,7 @@
     picture: Tpicture,
     location: Tlocation,
   };
+
+  export type Tdata = {
+    results: [],
+  }

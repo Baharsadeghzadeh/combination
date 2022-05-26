@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useFetch } from '../../hooks/use_fetch';
 import DataTable from '../data-table/data-table';
 import { FETCH_DATA_URL } from '../../constants/urls';
@@ -8,7 +8,7 @@ const App = () => {
   const { data, loading, error } = useFetch(
     FETCH_DATA_URL,
     isComponentMounted,
-    []
+    { results:[] }
   );
 
   return (

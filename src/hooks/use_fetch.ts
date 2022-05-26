@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Tdata } from '../shared/types/data-table';
 
-export const useFetch = (url: string, ref: any, initialValue: any) => {
-    const [data, setData] = useState<any>(initialValue);
-    const [error, setError] = useState<any>(null);
+export const useFetch = (url: string, ref: any, initialValue: Tdata) => {
+    const [data, setData] = useState<Tdata>(initialValue);
+    const [error, setError] = useState<any>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
