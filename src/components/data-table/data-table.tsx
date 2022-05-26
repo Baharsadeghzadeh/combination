@@ -9,7 +9,7 @@ type TDataTable = {
 const DataTable = ({ data } : TDataTable) => {
     return(
         <div>
-            <table className='data-table'>
+            <table data-testid='dti_table' className='data-table'>
                 <tr className='data-table-row'>
                     <th className='data-table__header-cell'>User Information</th>
                 </tr>
