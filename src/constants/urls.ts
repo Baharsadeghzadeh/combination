@@ -1,0 +1,1 @@
+export const FETCH_DATA_URL = 'https://randomuser.me/api/';

@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React, { useRef } from 'react';
+import { useFetch } from './hooks/use_fetch';
+import DataTable from './components/data-table/data-table';
+import { FETCH_DATA_URL } from './constants/urls';
 
-function App() {
+const App = () => {
+  const isComponentMounted = useRef(true);
+  const { data, loading, error } = useFetch(
+    FETCH_DATA_URL,
+    isComponentMounted,
+    []
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn_React
-        </a>
-      </header>
+    <div>
+      {loading ? (
+        <div>Loading data...</div>
+      ) : error ? (
+        <div>{error}</div>
+      ) : (
+        <DataTable data={data.results} /> 
+      )}
     </div>
   );
 }
